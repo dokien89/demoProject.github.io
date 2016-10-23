@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        iframe {
+            padding: 1%;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jvITVHmHwCc?rel=0&autohide=1&showinfo=0"></iframe>
+</div>
+
+<!-- 4:3 aspect ratio -->
+ <div class="col-sm-4" id="code_area">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a class="tab_code" data-toggle="tab" href="#html">index.html</a></li>
+                        <li><a class="tab_code" data-toggle="tab" href="#css">style.css</a></li>
+                        <li><a class="tab_code" data-toggle="tab" href="#editor">myscript.js</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="html" class="CodeMirror-scroll tab-pane fade in active">
+                            dgggggggggggg
+                        </div>
+                        <div id="css" class="CodeMirror-scroll tab-pane fade">
+                            <div class="editor" id="css_js">function foo(items) {
+                               css
+                            </div>
+                        </div>
+                       <div id="editor" class="CodeMirror-scroll tab-pane fade">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</div>
+    <script>
+            var editor_html = ace.edit("editor_html");
+            editor_html.setTheme("ace/theme/monokai");
+            editor_html.getSession().setMode("ace/mode/html");
+
+            var editor_css = ace.edit("editor_css");
+            editor_css.setTheme("ace/theme/monokai");
+            editor_css.getSession().setMode("ace/mode/css");
+ var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/javascript");
+        </script>
+                    </div>
+                    <div id="run_code">
+                        <button id="runCode">RUN</button>
+                    </div>   
+                </div>
+        </body>
+</html>

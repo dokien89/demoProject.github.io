@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+    window.onload = function () {
+     if (window.matchMedia('(min-width: 992px)').matches)
+     {
+     $('#overlayPanel').attr('data-role','');
+     
+     }else{
+     //$('#overlay').html('<b>dddh<b/>');
+     }
+     
+     };
+ });
+
+    </script>
+<div data-role="page" id="pageone">
+  <div data-role="panel" id="overlayPanel" data-display="overlay">
+   <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab2default" data-toggle="tab">Bài học</a></li>
+                        <li><a href="#tab3default" data-toggle="tab">Bài tập</a></li>
+                    </ul>
+                </div>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab2default">
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="item">HTML
+                                    <ul>
+                                        <li><a class="lesson_mobile" href="#bai01">Bài 01: HTML là gì?</a></li>
+                                        <li><a class="lesson_mobile" href="#bai02">Bài 02: HTML Elements và Attributes</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 03: Các thẻ HTML định dạng văn bản</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 04: Các thẻ HTML định dạng heading và list</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 05: Các thẻ HTML định dạng Table</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 06: Dùng thẻ a trong HTML để tạo links</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 07: Dùng thẻ img trong HTML để tạo hình ảnh</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 08: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item">CSS
+                                    <ul>
+                                        <li><a class="lesson" href="video/HTML01.mp4">Bài 01: HTML là gì? Bổ cục HTML của một trang web</a></li>
+                                        <li><a class="lesson" href="video/HTML02.mp4">Bài 02: HTML Elements và Attributes</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 03: Các thẻ HTML định dạng văn bản</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 04: Các thẻ HTML định dạng heading và list</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 05: Các thẻ HTML định dạng Table</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 06: Dùng thẻ a trong HTML để tạo links</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 07: Dùng thẻ img trong HTML để tạo hình ảnh</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 08: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="item">JavaScript
+                                    <ul>
+                                        <li><a class="lesson" href="#section2">Bài 01: HTML là gì? Bổ cục HTML của một trang web</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 02: HTML Elements và Attributes</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 03: Các thẻ HTML định dạng văn bản</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 04: Các thẻ HTML định dạng heading và list</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 05: Các thẻ HTML định dạng Table</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 06: Dùng thẻ a trong HTML để tạo links</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 07: Dùng thẻ img trong HTML để tạo hình ảnh</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 08: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="tab3default">
+                            <p>
+                                Tạo một trang HTML trình bày một bài viết từ 3 - 5 đoạn văn.
+                                Yêu cầu
+                                - Bài viết phải có nội dung thực sự
+                                - Có sử dụng các thẻ heading (ít nhất 3 thẻ), paragraph, các thẻ format text, special characters
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </div>
+  
+
+
+  <div data-role="header">
+    <h1>Page Header</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Click on one of the the buttons to open the Panel with different display modes.</p>
+    <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Overlay Panel</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Page Footer</h1>
+  </div>
+</div>
+
+</body>
+</html>
+

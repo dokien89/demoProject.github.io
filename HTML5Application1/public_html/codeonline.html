@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color: #152B39;
+            }
+            .container-fluid{
+                margin-top: 20px;
+            }
+            /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+            .row.content {height: 1500px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+            .container-fluid >.row{
+                margin-bottom: 20px;
+            }
+            .container-fluid >.row > a{
+                color: #f5f5f5;
+                margin-left: 17px;
+                font-weight: bold;
+                font-size: 19px;
+                width: 100px;
+                height: 40px;
+                background: #219D91;
+                padding: 12px;
+            }
+            .CodeMirror-scroll > textarea{
+                border: none;
+                background-color: #354551;
+                width: 100%;
+                color:white;
+            }
+            #code_area{
+                margin-top: -5px;
+            }
+            #result_code  > iframe{
+                margin-top: 36px;
+                height: 450px;
+                width: 100%;
+            }
+            #run_code #runCode{
+                background-color: #219D91;
+                border: none;
+                padding: 4px 29px;
+                font-weight: bold;
+                color: white;
+            }
+            #html pre{
+                height: 450px;
+            }
+
+            /*            .editor { 
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }*/
+            .tab-content .CodeMirror-scroll{
+                height: 450px;
+
+                border:  none;
+            }
+
+
+            #editor { 
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                /*background-color: white;*/
+                width: 100%;
+                height: 450px;
+            }
+            .col-sm-4{
+                overflow: hidden;         
+            }
+            .CodeMirror-scroll{
+                box-sizing: content-box;
+
+                margin-bottom: -30px;
+                margin-right: -30px;
+                padding-bottom: 30px;
+                height: 100%;
+                outline: none;
+                position: relative;
+            }
+            ul.nav-tabs{
+                border-bottom: none;
+                margin-bottom: 6px;
+            }
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height: auto;}
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <a href="panel.html">Học lý thuyết</a>
+            </div>
+            <div class="row content">
+                <div class="col-sm-3" id ="excersies">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    HTML Elements và Attributes
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    Bài tập<br/><br/>
+
+                                    Tạo một trang HTML trình bày một bài viết từ 3 - 5 đoạn văn.<br/><br/>
+
+                                    Yêu cầu<br/>
+
+                                    - Bài viết phải có nội dung thực sự<br/>
+
+                                    - Có sử dụng các thẻ heading (ít nhất 3 thẻ), paragraph, các thẻ format text, special characters<br/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#editor">Home</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                        <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div id="editor" class="tab-pane fade in active CodeMirror-scroll"></div>
+
+
+
+                        <div id="menu1" class="tab-pane fade CodeMirror-scroll">
+
+                        </div>
+                        <div id="menu2" class="tab-pane fade CodeMirror-scroll">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-5" id="result_code">
+                    <iframe>
+
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <p>Footer Text</p>
+        </footer>
+        <script src="css/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8">
+
+        </script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.getSession().setMode("ace/mode/html");
+        </script>
+    </body>
+</html>
+

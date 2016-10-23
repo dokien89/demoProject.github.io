@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+
+        <link rel="stylesheet" type="text/css" href="css/style_2.css">
+        <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+        <script src="js/learn_online.js"></script>
+    </head>
+    <body>
+        <div role="main" class="ui-content">
+            <a href="#overlay" class="ui-btn ui-btn-inline lesson_collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">d</span>
+                <span class="icon-bar">d</span>
+                <span class="icon-bar">d</span>
+            </a>
+        </div>
+       
+        <div class="container">
+            <div class="page-header">
+                <h1>Panels with nav tabs.</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel with-nav-tabs panel-default" id="theory">
+                        <div class="panel-heading">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab2default" data-toggle="tab">Bài học</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab2default">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a class="lesson" href="#bai01">Bài 01: HTML là gì?</a></li>
+                                        <li><a class="lesson" href="#bai02">Bài 02: HTML Elements và Attributes</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 03: Các thẻ HTML định dạng văn bản</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 04: Các thẻ HTML định dạng heading và list</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 05: Các thẻ HTML định dạng Table</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 06: Dùng thẻ a trong HTML để tạo links</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 07: Dùng thẻ img trong HTML để tạo hình ảnh</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 08: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 09: HTML Form</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 10: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- video -->
+                <div class="col-md-8 all_video">
+                    <h2>4:3 Responsive Aspect Ratio</h2>
+                    <div class="embed-responsive embed-responsive-16by9" id ="lesson_video">
+                        <video controls> <source src="video/bai01.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 footer-left" data-reactid=".0.2.0">
+                    <a href="#" id="prev-lesson" class="btn btn-primary btn-flat btn-prev-lesson" data-reactid=".0.2.0.0">
+                        <i class="fa fa-arrow-left" data-reactid=".0.2.0.0.0"></i><span data-reactid=".0.2.0.0.1"> </span><span data-reactid=".0.2.0.0.2">Bài trước</span></a>
+                    <a href="#" id="next-lesson" class="btn btn-primary btn-flat btn-next-lesson" data-reactid=".0.2.0.1">
+                        <span data-reactid=".0.2.0.1.0">Bài sau</span><span data-reactid=".0.2.0.1.1"> </span>
+                        <i class="fa fa-arrow-right" data-reactid=".0.2.0.1.2"></i></a>
+                </div>
+                <div class="col-md-6">
+                    Lam Quiz
+                </div>
+            </div>
+            <!-- Bai tap -->
+             
+            <div class="row" id="challenge">
+                 
+                <div class="col-sm-3" id ="excersies">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a id="get_excersice" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-5" id="coding">
+                   <textarea  rows="50"></textarea>
+                </div>
+                <div class="col-sm-4">
+                    
+                        <p id ="result_code">
+                        </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div data-role="panel" id="overlay" data-display="overlay"> 
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab2default" data-toggle="tab">Bài học</a></li>
+                        <li><a href="#tab3default" data-toggle="tab">Bài tập</a></li>
+                    </ul>
+                </div>
+
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab2default">
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="item">HTML
+                                    <ul>
+                                        <li><a class="lesson_mobile" href="#bai01">Bài 01: HTML là gì?</a></li>
+                                        <li><a class="lesson_mobile" href="#bai02">Bài 02: HTML Elements và Attributes</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 03: Các thẻ HTML định dạng văn bản</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 04: Các thẻ HTML định dạng heading và list</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 05: Các thẻ HTML định dạng Table</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 06: Dùng thẻ a trong HTML để tạo links</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 07: Dùng thẻ img trong HTML để tạo hình ảnh</a></li>
+                                        <li><a class="lesson" href="#section3">Bài 08: Sử dụng CSS tùy chỉnh giao diện HTML</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+        <script>
+        </script>
+    </body>
+</html>

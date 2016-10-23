@@ -1,0 +1,77 @@
+<div class="row" id="challenge">
+                <div class="col-sm-3" id ="excersies">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a id="get_excersice" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-5" id="coding">
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a class="tab_code" data-toggle="tab" href="#html">index.html</a></li>
+                        <li><a class="tab_code" data-toggle="tab" href="#css">style.css</a></li>
+                        <li><a class="tab_code" data-toggle="tab" href="#js">myscript.js</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div contenteditable id="html" class="CodeMirror-scroll tab-pane fade in active">
+                            <textarea rows="50"></textarea>
+                            <button id="runCode">RUN</button>
+                        </div>
+
+                        <div id="css" contenteditable class="tab-pane fade CodeMirror-scroll">
+                         <textarea rows="50"></textarea>  
+div {
+    width: 100px;
+    height: 100px;                        
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+    }
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}                       
+                           
+                        </div>
+                        <div contenteditable id="js" class="CodeMirror-scroll tab-pane fade">
+<textarea rows="50"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    
+                        <p id ="result_code">
+                        </p>
+                </div>
+            </div>
