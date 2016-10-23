@@ -52,9 +52,10 @@
                 margin-top: -5px;
             }
             #result_code  > iframe{
-                margin-top: 36px;
-                height: 450px;
+                margin-top: 49px;
+                height: 445px;
                 width: 100%;
+                background-color: white;
             }
             #run_code #runCode{
                 background-color: #219D91;
@@ -62,6 +63,7 @@
                 padding: 4px 29px;
                 font-weight: bold;
                 color: white;
+                margin-top: 4px;
             }
             #html pre{
                 height: 450px;
@@ -74,6 +76,7 @@
                     bottom: 0;
                     left: 0;
                 }*/
+
             .tab-content .CodeMirror-scroll{
                 height: 450px;
 
@@ -82,7 +85,6 @@
 
 
             #editor { 
-
                 top: 0;
                 right: 0;
                 bottom: 0;
@@ -96,18 +98,29 @@
             }
             .CodeMirror-scroll{
                 box-sizing: content-box;
-
                 margin-bottom: -30px;
                 margin-right: -30px;
                 padding-bottom: 30px;
-                height: 100%;
+                width: 100%;
+                height: 450px;
                 outline: none;
                 position: relative;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
             }
             ul.nav-tabs{
                 border-bottom: none;
                 margin-bottom: 6px;
             }
+            
+           
+            
+            .code_area .tab-content{
+                overflow: auto;
+            }
+
             /* On small screens, set height to 'auto' for sidenav and grid */
             @media screen and (max-width: 767px) {
                 .sidenav {
@@ -152,47 +165,57 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 code_area">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#editor">Home</a></li>
-                        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                        <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                        <li class="active"><a data-toggle="tab" href="#html">index.html</a></li>
+                        <li><a data-toggle="tab" href="#css">style.css</a></li>
+                        <li><a data-toggle="tab" href="#js">script.js</a></li>
                     </ul>
 
                     <div class="tab-content">
-
-                        <div id="editor" class="tab-pane fade in active CodeMirror-scroll"></div>
-
-
-
-                        <div id="menu1" class="tab-pane fade CodeMirror-scroll">
-
-                        </div>
-                        <div id="menu2" class="tab-pane fade CodeMirror-scroll">
-                        </div>
-
+                        <div id="html" class="tab-pane fade in active CodeMirror-scroll"></div>
+                        <div id="css" class="tab-pane fade CodeMirror-scroll"></div>
+                        <div id="js" class="tab-pane fade CodeMirror-scroll"></div>
+                    </div>
+                    <div id="run_code">
+                        <button id="runCode">RUN</button>
                     </div>
                 </div>
 
                 <div class="col-sm-5" id="result_code">
-                    <iframe>
-
-                    </iframe>
+                    <iframe id ="result_ifr"></iframe>
                 </div>
             </div>
+            <
         </div>
 
         <footer class="container-fluid">
             <p>Footer Text</p>
         </footer>
-        <script src="css/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8">
-
+        <script src="css/ace-builds/src-noconflict/ace.js" 
+                type="text/javascript" charset="utf-8">
         </script>
         <script>
-            var editor = ace.edit("editor");
-            editor.setTheme("ace/theme/monokai");
-            editor.getSession().setMode("ace/mode/html");
+            var html = ace.edit("html");
+            html.setTheme("ace/theme/monokai");
+            html.getSession().setMode("ace/mode/html");
+            var css = ace.edit("css");
+            css.setTheme("ace/theme/monokai");
+            css.getSession().setMode("ace/mode/css");
+            var js = ace.edit("js");
+            js.setTheme("ace/theme/monokai");
+            js.getSession().setMode("ace/mode/javascript");
+
+            $(document).ready(function () {
+                $("#runCode").click(function () {
+                    var content = $("div.ace_content").text();
+                    var $iframe = $('#result_ifr');
+                    $iframe.ready(function () {
+                        $iframe.contents().find("body").empty().append(content);
+                    });
+                });
+            });
+
         </script>
     </body>
 </html>
